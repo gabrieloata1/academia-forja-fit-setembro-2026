@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="ff-fav-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3b00"/>
+      <stop offset="50%" stop-color="#ff6a00"/>
+      <stop offset="100%" stop-color="#ffb300"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0b0d10"/>
+  <polygon points="32,6 56,18 56,46 32,58 8,46 8,18" fill="#171b22" stroke="url(#ff-fav-grad)" stroke-width="2"/>
+  <g transform="translate(2, 2)">
+    <!-- Bigorna -->
+    <path d="M17 31 L43 31 C40 31 38 34 37 36 L39 42 L21 42 L23 36 C22 34 20 31 17 31 Z" fill="#94a3b8"/>
+    <path d="M19 42 L41 42 L44 46 L16 46 Z" fill="#94a3b8"/>
+    <!-- Raio -->
+    <polygon points="32,7 23,26 31,26 27,41 39,22 30,22" fill="url(#ff-fav-grad)" stroke="#ffffff" stroke-width="0.8"/>
+  </g>
+</svg>

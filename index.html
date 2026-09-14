@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORJA FIT — Academia de Musculação & Cross Training</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="description" content="Academia de musculação, cross training e treino funcional. Planos a partir de R$ 89/mês. Aula experimental grátis! Fale conosco pelo WhatsApp.">
+    <meta property="og:title" content="Forja Fit | Academia de Musculação & Cross Training">
+    <meta property="og:description" content="Academia com 900m², musculação, crossfit, funcional e personal trainer. Primeira aula experimental grátis. Agende pelo WhatsApp.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&auto=format&fit=crop&q=80">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Forja Fit | Academia de Musculação & Cross Training">
+    <meta name="twitter:description" content="Academia com 900m², musculação, crossfit, funcional e personal trainer. Primeira aula experimental grátis. Agende pelo WhatsApp.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&auto=format&fit=crop&q=80">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0d10;
+  --bg-2:#12151a;
+  --card:#171b22;
+  --line:#242a33;
+  --txt:#f2f4f7;
+  --muted:#9aa4b2;
+  --accent:#ff6a00;
+  --accent-2:#ffb300;
+  --grad:linear-gradient(135deg,#ff6a00 0%,#ffb300 100%);
+  --wa:#25d366;
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.brand{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:1.1}
+img{max-width:100%}
+a{text-decoration:none;color:inherit}
+.container{width:min(1140px,92%);margin:0 auto}
+section{padding:88px 0}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,106,0,.12);color:var(--accent);border:1px solid rgba(255,106,0,.35);padding:6px 14px;border-radius:999px;font-size:.8rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--grad)}
+.sec-head{max-width:640px;margin-bottom:52px}
+.sec-head h2{font-size:clamp(2rem,4.5vw,3rem);margin:14px 0 12px}
+.sec-head h2 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec-head p{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;border-radius:12px;font-weight:700;font-size:1rem;transition:.25s;cursor:pointer;border:none}
+.btn-wa{background:var(--wa);color:#062b12;box-shadow:0 8px 24px rgba(37,211,102,.35)}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(37,211,102,.5)}
+.btn-ghost{background:transparent;color:var(--txt);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-grad{background:var(--grad);color:#1a0d00;box-shadow:0 8px 24px rgba(255,106,0,.35)}
+.btn-grad:hover{transform:translateY(-3px)}
+
+/* HEADER */
+header{position:fixed;inset:0 0 auto 0;z-index:100;padding:18px 0;transition:.3s}
+header.scrolled{background:rgba(11,13,16,.92);backdrop-filter:blur(12px);padding:12px 0;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:1.7rem;font-weight:900;display:flex;align-items:center;gap:10px}
+.brand b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .bolt{width:34px;height:34px;border-radius:9px;background:var(--grad);display:grid;place-items:center;color:#1a0d00;font-size:1.1rem}
+.brand-logo{display:inline-flex;align-items:center;transition:transform .2s ease}
+.brand-logo:hover{transform:scale(1.02)}
+.logo-img{height:46px;width:auto;display:block}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-size:.92rem;font-weight:500;color:var(--muted);transition:.2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{padding:11px 22px;font-size:.9rem}
+.hamb{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.hamb span{width:26px;height:2.5px;background:var(--txt);border-radius:2px;transition:.3s}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 0 90px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(700px 500px at 85% 15%,rgba(255,106,0,.18),transparent 60%),
+  radial-gradient(600px 400px at 10% 90%,rgba(255,179,0,.10),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at center,#000 20%,transparent 75%)}
+.hero .container{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,6.2vw,4.8rem);font-weight:900;margin:20px 0}
+.hero h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:var(--muted);font-size:1.1rem;max-width:520px;margin-bottom:34px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:40px;margin-top:52px;flex-wrap:wrap}
+.hero-stats b{display:block;font-family:'Barlow Condensed';font-size:2.4rem;font-weight:900;color:var(--accent-2)}
+.hero-stats small{color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;font-size:.75rem}
+.hero-visual{position:relative}
+.hero-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 30px 60px rgba(0,0,0,.5);position:relative;z-index:2}
+.hero-photo-banner{width:100%;height:220px;border-radius:18px;overflow:hidden;margin-bottom:20px;border:1px solid var(--line)}
+.hero-photo-banner img{width:100%;height:100%;object-fit:cover}
+.hero-card h3{font-size:1.35rem;margin-bottom:16px;color:var(--accent-2)}
+.class-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.class-row:last-child{border:none}
+.class-row .nm{font-weight:600;font-size:.95rem}
+.class-row small{display:block;color:var(--muted);font-weight:400;font-size:.82rem}
+.class-row .hr{font-family:'Barlow Condensed';font-weight:700;color:var(--accent);font-size:1.05rem;white-space:nowrap}
+.hero-badge{position:absolute;top:-14px;right:14px;background:var(--grad);color:#1a0d00;font-weight:800;font-size:.8rem;padding:9px 16px;border-radius:999px;box-shadow:0 10px 26px rgba(255,106,0,.4);animation:pulse 2s infinite;z-index:3}
+@keyframes pulse{50%{transform:scale(1.06)}}
+
+/* MODALIDADES */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-8px);border-color:rgba(255,106,0,.5);box-shadow:0 20px 40px rgba(0,0,0,.45)}
+.card-thumb{height:175px;overflow:hidden;position:relative;background:#14171d}
+.card-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card:hover .card-thumb img{transform:scale(1.08)}
+.card-content{padding:24px 22px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:1.35rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.92rem;flex:1}
+.card .more{display:inline-block;margin-top:16px;color:var(--accent);font-weight:600;font-size:.9rem}
+
+/* PLANOS */
+#planos{background:var(--bg-2)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:38px 32px;position:relative;transition:.3s;display:flex;flex-direction:column}
+.plan:hover{transform:translateY(-8px)}
+.plan.featured{border:2px solid var(--accent);background:linear-gradient(180deg,rgba(255,106,0,.10),rgba(23,27,34,1) 45%);box-shadow:0 24px 50px rgba(255,106,0,.15)}
+.plan .flag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--grad);color:#1a0d00;font-weight:800;font-size:.75rem;letter-spacing:1.5px;padding:7px 18px;border-radius:999px;text-transform:uppercase}
+.plan h3{font-size:1.5rem}
+.plan .desc{color:var(--muted);font-size:.9rem;margin:6px 0 22px}
+.price{font-family:'Barlow Condensed';font-size:3.2rem;font-weight:900;color:var(--accent-2);line-height:1}
+.price small{font-size:1rem;color:var(--muted);font-family:'Inter';font-weight:500}
+.plan ul{list-style:none;margin:26px 0 30px;flex:1}
+.plan li{padding:9px 0;color:var(--muted);font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.plan li::before{content:"✓";color:var(--accent);font-weight:800}
+.plan .btn{width:100%}
+
+/* ESTRUTURA */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.feat-list{list-style:none;display:grid;gap:18px}
+.feat-list li{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;transition:.25s}
+.feat-list li:hover{border-color:rgba(255,106,0,.45)}
+.feat-list .ico{flex-shrink:0;width:46px;height:46px;border-radius:12px;background:rgba(255,106,0,.12);display:grid;place-items:center;font-size:1.3rem}
+.feat-list b{display:block;margin-bottom:3px}
+.feat-list span{color:var(--muted);font-size:.92rem}
+
+/* DEPOIMENTOS */
+#depoimentos{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.quote{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+.quote .stars{color:var(--accent-2);letter-spacing:3px;margin-bottom:14px}
+.quote p{color:var(--muted);font-size:.95rem}
+.quote .who{display:flex;align-items:center;gap:12px;margin-top:20px}
+.quote .av{width:44px;height:44px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-weight:800;color:#1a0d00;font-family:'Barlow Condensed';font-size:1.1rem}
+.quote .who b{display:block;font-size:.95rem}
+.quote .who small{color:var(--muted)}
+
+/* CTA */
+.cta-band{background:linear-gradient(135deg,#181104 0%,#2b1600 100%);border:1px solid rgba(255,106,0,.35);border-radius:26px;padding:64px 48px;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 250px at 50% 0%,rgba(255,106,0,.22),transparent 70%)}
+.cta-band h2{font-size:clamp(2rem,4vw,3rem);position:relative}
+.cta-band p{color:var(--muted);margin:14px 0 30px;position:relative}
+.cta-band .btn{position:relative}
+
+/* FOOTER */
+footer{background:#08090b;border-top:1px solid var(--line);padding:56px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:40px}
+footer h4{font-family:'Barlow Condensed';font-size:1.2rem;text-transform:uppercase;margin-bottom:16px;letter-spacing:1px}
+footer p,footer li{color:var(--muted);font-size:.92rem}
+footer ul{list-style:none;display:grid;gap:10px}
+footer a:hover{color:var(--accent)}
+.foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.45);transition:.3s;animation:float 2.6s ease-in-out infinite}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+.wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ring 1.8s infinite}
+@keyframes ring{to{transform:scale(1.55);opacity:0}}
+@keyframes float{50%{translate:0 -6px}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(34px);transition:.7s cubic-bezier(.2,.7,.3,1)}
+.reveal.reveal-on{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .grid-3,.plans,.quotes{grid-template-columns:1fr 1fr}
+  .hero .container,.split{grid-template-columns:1fr}
+  .hero-visual{max-width:520px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  section{padding:64px 0}
+  .grid-3,.plans,.quotes{grid-template-columns:1fr}
+  .nav-links{position:fixed;top:0;right:-100%;height:100vh;width:min(300px,80%);background:var(--bg-2);flex-direction:column;justify-content:center;gap:30px;transition:.35s;border-left:1px solid var(--line)}
+  .nav-links.open{right:0}
+  .hamb{display:flex;z-index:110}
+  .hero{padding-top:120px}
+  .hero-stats{gap:24px}
+  .cta-band{padding:48px 24px}
+  .foot-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header id="topbar">
+  <div class="container nav">
+    <a href="#" class="brand-logo" aria-label="FORJA FIT Academia">
+      <img src="logo.svg" alt="FORJA FIT — Academia de Musculação &amp; Cross Training" class="logo-img">
+    </a>
+    <ul class="nav-links" id="menu">
+      <li><a href="#modalidades">Modalidades</a></li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#estrutura">Estrutura</a></li>
+      <li><a href="#depoimentos">Alunos</a></li>
+      <li><a class="btn btn-wa nav-cta" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20GR%C3%81TIS%20na%20FORJA%20FIT.">Matricule-se</a></li>
+    </ul>
+    <button class="hamb" id="hamb" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div>
+      <span class="tag">Aula experimental grátis</span>
+      <h1>Treino sério.<br>Resultado <span>de verdade.</span></h1>
+      <p class="lead">Musculação, Cross Training e treino funcional em um espaço completo, com professores formados e acompanhamento de verdade. Comece hoje com uma aula experimental <strong style="color:var(--accent-2)">100% gratuita</strong>.</p>
+      <div class="hero-btns">
+        <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20GR%C3%81TIS%20na%20FORJA%20FIT.">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="#062b12"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 4 1.6 6.2 1.6h.5c6.6 0 12-5.3 12-11.9S22.6 3 16 3zm6 16.3c-.3.8-1.7 1.6-2.3 1.6-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.2-1.4-1.9-1.4-3.6 0-1.7.9-2.6 1.2-2.9.3-.3.7-.4 1-.4h.7c.2 0 .5-.1.8.6.3.8 1.1 2.6 1.2 2.8.1.2.1.4 0 .6-.3.6-.6.9-.9 1.2-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.1.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1 1-.2 1.8z"/></svg>
+          Aula experimental grátis
+        </a>
+        <a class="btn btn-ghost" href="#planos">Ver planos</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>+1.200</b><small>Alunos ativos</small></div>
+        <div><b>10</b><small>Anos de história</small></div>
+        <div><b>24h</b><small>Academia aberta</small></div>
+        <div><b>4.9★</b><small>Avaliação Google</small></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-badge">🔥 Vagas limitadas</div>
+      <div class="hero-card">
+        <div class="hero-photo-banner">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop&q=80" alt="Treino intenso na Academia Forja Fit" loading="eager">
+        </div>
+        <h3>Grade da semana</h3>
+        <div class="class-row"><div class="nm">Cross Training<small>Professor Diego</small></div><span class="hr">06:00 • 19:00</span></div>
+        <div class="class-row"><div class="nm">Musculação Guiada<small>Profa. Camila</small></div><span class="hr">07:00 • 20:00</span></div>
+        <div class="class-row"><div class="nm">Funcional Queima<small>Professor Léo</small></div><span class="hr">08:00 • 18:30</span></div>
+        <div class="class-row"><div class="nm">Hipertrofia Avançada<small>Professor Diego</small></div><span class="hr">10:00 • 21:00</span></div>
+        <a class="btn btn-grad" style="width:100%;margin-top:22px" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20GR%C3%81TIS%20na%20FORJA%20FIT.">Reservar minha vaga</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODALIDADES -->
+<section id="modalidades">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="tag">Modalidades</span>
+      <h2>Treinos para <span>todos os objetivos</span></h2>
+      <p>Do primeiro treino à competição: estruturamos o plano ideal para emagrecer, ganhar massa ou performance.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80" alt="Treino de Musculação e Hipertrofia" loading="lazy">
+        </div>
+        <div class="card-content">
+          <h3>Musculação</h3>
+          <p>Equipamentos de última geração, halteres até 60kg, fichas personalizadas e reavaliação a cada 30 dias para hipertrofia e força.</p>
+          <a class="more" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20treino%20de%20Muscula%C3%A7%C3%A3o%20da%20FORJA%20FIT.">Falar com um professor →</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80" alt="Box de Cross Training" loading="lazy">
+        </div>
+        <div class="card-content">
+          <h3>Cross Training</h3>
+          <p>WODs diários, coaching certificado e treinos escaláveis para iniciantes até atletas. Suor garantido em 45 minutos.</p>
+          <a class="more" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Cross%20Training%20da%20FORJA%20FIT.">Falar com um professor →</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&auto=format&fit=crop&q=80" alt="Treino Funcional Dinâmico" loading="lazy">
+        </div>
+        <div class="card-content">
+          <h3>Treino Funcional</h3>
+          <p>Aulas dinâmicas em grupo para condicionamento, mobilidade e queima calórica — com muito menos impacto nas articulações.</p>
+          <a class="more" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Treino%20Funcional%20da%20FORJA%20FIT.">Falar com um professor →</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600&auto=format&fit=crop&q=80" alt="Avaliação Física e Bioimpedância" loading="lazy">
+        </div>
+        <div class="card-content">
+          <h3>Avaliação Física</h3>
+          <p>Bioimpedância, medidas, testes de força e relatório completo para acompanhar sua evolução mês a mês.</p>
+          <a class="more" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20f%C3%ADsica%20na%20FORJA%20FIT.">Agendar avaliação →</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80" alt="Personal Trainer individual" loading="lazy">
+        </div>
+        <div class="card-content">
+          <h3>Personal Trainer</h3>
+          <p>Sessões individuais ou em dupla, com foco total no seu objetivo, horário flexível e periodização profissional.</p>
+          <a class="more" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20valores%20de%20Personal%20Trainer%20na%20FORJA%20FIT.">Consultar valores →</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&auto=format&fit=crop&q=80" alt="Nutrição Esportiva e Plano Alimentar" loading="lazy">
+        </div>
+        <div class="card-content">
+          <h3>Acompanhamento Nutricional</h3>
+          <p>Plano alimentar integrado ao treino, com nutricionista parceira e ajustes mensais conforme sua evolução.</p>
+          <a class="more" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20acompanhamento%20nutricional%20da%20FORJA%20FIT.">Quero meu plano →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section id="planos">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="tag">Planos</span>
+      <h2>Escolha seu <span>plano ideal</span></h2>
+      <p>Sem taxa de matrícula, sem fidelidade abusiva. Cancele quando quiser.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>Mensal</h3>
+        <p class="desc">Ideal para começar sem compromisso</p>
+        <div class="price">R$ 119<small>/mês</small></div>
+        <ul>
+          <li>Acesso livre à musculação</li>
+          <li>Aulas coletivas inclusas</li>
+          <li>Ficha de treino personalizada</li>
+          <li>Avaliação física inicial</li>
+        </ul>
+        <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20MENSAL%20da%20FORJA%20FIT.">Quero o mensal</a>
+      </div>
+      <div class="plan featured reveal">
+        <span class="flag">Mais escolhido</span>
+        <h3>Trimestral</h3>
+        <p class="desc">O melhor custo-benefício para resultados</p>
+        <div class="price">R$ 99<small>/mês</small></div>
+        <ul>
+          <li>Tudo do plano mensal</li>
+          <li>24h de acesso ao box de cross</li>
+          <li>Reavaliação física mensal</li>
+          <li>Acesso ao app de treinos</li>
+          <li>1 aula de personal grátis</li>
+        </ul>
+        <a class="btn btn-grad" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20TRIMESTRAL%20da%20FORJA%20FIT.">Garantir meu desconto</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Anual Black</h3>
+        <p class="desc">Máximo resultado, mínimo preço</p>
+        <div class="price">R$ 89<small>/mês</small></div>
+        <ul>
+          <li>Tudo do plano trimestral</li>
+          <li>Acesso 24h completo</li>
+          <li>Convite para um amigo/mês</li>
+          <li>Camiseta oficial exclusiva</li>
+          <li>2 sessões de personal grátis</li>
+        </ul>
+        <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20ANUAL%20BLACK%20da%20FORJA%20FIT.">Quero o anual</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTRUTURA -->
+<section id="estrutura">
+  <div class="container split">
+    <div class="reveal">
+      <span class="tag">Estrutura</span>
+      <h2 style="font-size:clamp(2rem,4vw,2.9rem);margin:14px 0 12px">Tudo o que você precisa,<br><span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">em um só lugar</span></h2>
+      <p style="color:var(--muted)">Mais de 900m² construídos para você treinar sem fila, sem espera e sem desculpa.</p>
+      <div style="margin-top:20px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 40px rgba(0,0,0,.4);height:240px">
+        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=900&auto=format&fit=crop&q=80" alt="Espaço 900m2 completo da Academia Forja Fit" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+      </div>
+      <div style="margin-top:26px"><a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20agendar%20uma%20visita%20%C3%A0%20FORJA%20FIT.">Agendar visita ao local</a></div>
+    </div>
+    <ul class="feat-list">
+      <li class="reveal">
+        <div class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent)"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43 1.43 1.43 2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43 1.43-1.43-1.43-1.43z"/></svg>
+        </div>
+        <div><b>Área de musculação premium</b><span>Máquinas Life Fitness, halteres até 60kg e plataformas de levantamento.</span></div>
+      </li>
+      <li class="reveal">
+        <div class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2L1 21h22L12 2zm0 3.84L19.53 19H4.47L12 5.84zM11 10h2v4h-2zm0 6h2v2h-2z"/></svg>
+        </div>
+        <div><b>Box de cross training</b><span>Rig completo, cordas, kettlebells, caixotes e área de ginástica.</span></div>
+      </li>
+      <li class="reveal">
+        <div class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2z"/></svg>
+        </div>
+        <div><b>Vestiários completos</b><span>Armários individuais, chuveiros quentes e secadores de cabelo.</span></div>
+      </li>
+      <li class="reveal">
+        <div class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent)"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>
+        </div>
+        <div><b>Ar-condicionado em todas as salas</b><span>Ambientes climatizados para treinar com conforto no verão inteiro.</span></div>
+      </li>
+      <li class="reveal">
+        <div class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent)"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+        </div>
+        <div><b>Estacionamento gratuito</b><span>Vagas cobertas e bicicletário para os alunos.</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="tag">Depoimentos</span>
+      <h2>Resultados de <span>quem treina aqui</span></h2>
+    </div>
+    <div class="quotes">
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Perdi 14kg em 6 meses com o acompanhamento dos professores. O treino de cross mudou minha vida — e o grupo da aula das 6h virou família!"</p>
+        <div class="who"><div class="av">JM</div><div><b>Juliana Mendes</b><small>Aluna há 1 ano</small></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Melhor academia da região, disparado. Equipamentos novos, nunca pego fila e a ficha é revisada todo mês. Ganhei 8kg de massa magra."</p>
+        <div class="who"><div class="av">RS</div><div><b>Rafael Souza</b><small>Aluno há 2 anos</small></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Comecei sem saber nada e fui recebida super bem. As professoras têm paciência e corrigem tudo. Ambiente limpo e seguro, recomendo demais."</p>
+        <div class="who"><div class="av">PC</div><div><b>Patrícia Costa</b><small>Aluna há 8 meses</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Seu primeiro treino é <span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">por nossa conta</span></h2>
+      <p>Chame a gente no WhatsApp, agende sua aula experimental gratuita e sinta a diferença da FORJA FIT.</p>
+      <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20GR%C3%81TIS%20na%20FORJA%20FIT.">
+        <svg width="20" height="20" fill="#062b12" viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 6.2 1.6 6.7 1.6 6.6 0 12-5.3 12-11.9S22.6 3 16 3z" opacity=".01"/><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1.4 4.1 2.3 6.7 2.3 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm6 16.3c-.3.8-1.7 1.6-2.3 1.6-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.2-1.4-1.9-1.4-3.6 0-1.7.9-2.6 1.2-2.9.3-.3.7-.4 1-.4h.7c.2 0 .5-.1.8.6.3.8 1.1 2.6 1.2 2.8.1.2.1.4 0 .6-.3.6-.6.9-.9 1.2-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.1.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1 1-.2 1.8z"/></svg>
+        Chamar no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="brand-logo" style="margin-bottom:14px;display:inline-block" aria-label="FORJA FIT Academia">
+          <img src="logo.svg" alt="FORJA FIT — Academia de Musculação &amp; Cross Training" class="logo-img">
+        </a>
+        <p>Academia de musculação & cross training. Treino de verdade, resultado de verdade. Venha fazer parte da nossa comunidade.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#modalidades">Modalidades</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#estrutura">Estrutura</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>📍 Av. Central, 1500 — Centro</li>
+          <li>🕐 Seg a Sex 5h–23h • Sáb 8h–14h</li>
+          <li>📱 WhatsApp: <a href="https://wa.me/5521983228129" target="_blank" rel="noopener"><strong>(21) 98322-8129</strong></a></li>
+          <li><a class="btn btn-wa" style="padding:11px 20px;font-size:.9rem;margin-top:6px" target="_blank" rel="noopener" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20FORJA%20FIT.">Falar agora</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> FORJA FIT. Todos os direitos reservados.</span>
+      <span>CNPJ 38.924.115/0001-44</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5521983228129?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20FORJA%20FIT%20%F0%9F%92%AA" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 4 1.6 6.2 1.6h.5c6.6 0 12-5.3 12-11.9S22.6 3 16 3zm6 16.3c-.3.8-1.7 1.6-2.3 1.6-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.2-1.4-1.9-1.4-3.6 0-1.7.9-2.6 1.2-2.9.3-.3.7-.4 1-.4h.7c.2 0 .5-.1.8.6.3.8 1.1 2.6 1.2 2.8.1.2.1.4 0 .6-.3.6-.6.9-.9 1.2-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.1.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1 1-.2 1.8z"/></svg>
+</a>
+
+<script>
+const hamb=document.getElementById('hamb'),menu=document.getElementById('menu');
+hamb.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+const header=document.getElementById('topbar');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>40));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('reveal-on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>{el.classList.add('reveal');io.observe(el)});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
